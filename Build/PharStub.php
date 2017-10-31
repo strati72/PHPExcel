@@ -3,7 +3,7 @@ spl_autoload_register(function ($class) {
     include 'phar://PHPExcel/' . str_replace('_', '/', $class) . '.php';
 });
 
-try {     
+try {
     Phar::mapPhar();
     include 'phar://PHPExcel/PHPExcel.php';
 } catch (PharException $e) {
